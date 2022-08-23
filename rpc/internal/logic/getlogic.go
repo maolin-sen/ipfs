@@ -8,10 +8,10 @@ import (
 	httpapi "github.com/ipfs/go-ipfs-http-client"
 	iface "github.com/ipfs/interface-go-ipfs-core"
 	"github.com/ipfs/interface-go-ipfs-core/path"
+	"github.com/maolin-sen/ipfs/rpc/internal/svc"
+	"github.com/maolin-sen/ipfs/rpc/ipfs"
 	ma "github.com/multiformats/go-multiaddr"
 	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/internal/svc"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/ipfs"
 )
 
 type GetLogic struct {

@@ -5,9 +5,9 @@ package server
 
 import (
 	"context"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/internal/svc"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/ipfs"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/internal/logic"
+	"github.com/maolin-sen/ipfs/rpc/internal/svc"
+	"github.com/maolin-sen/ipfs/rpc/ipfs"
+	"github.com/maolin-sen/ipfs/rpc/internal/logic"
 )
 
 type IPFSServer struct {

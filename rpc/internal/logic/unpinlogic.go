@@ -9,8 +9,8 @@ import (
 	iface "github.com/ipfs/interface-go-ipfs-core"
 	"github.com/ipfs/interface-go-ipfs-core/options"
 	"github.com/ipfs/interface-go-ipfs-core/path"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/internal/svc"
-	"github.com/maolin-sen/go-filecoin-market/apps/ipfs/rpc/ipfs"
+	"github.com/maolin-sen/ipfs/rpc/internal/svc"
+	"github.com/maolin-sen/ipfs/rpc/ipfs"
 	ma "github.com/multiformats/go-multiaddr"
 	"github.com/zeromicro/go-zero/core/logx"
 )
