@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package ipfs;
+option go_package = "./ipfs";
+
+service IPFS {
+    rpc Stage(APIID) returns (Cid) {}
+    rpc StageCid(StageCidRequest) returns (Empty){}
+    rpc Unpin(UnpinRequest) returns (Empty){}
+    rpc Pin(PinRequest) returns (PinResponse){}
+    rpc Get(Cid) returns (Empty){}
+    rpc Replace(ReplaceRequest) returns (ReplaceResponse){}
+    rpc IsPinned(IsPinnedRequest) returns (IsPinnedResponse){}
+    rpc GCStaged(GCStagedRequest) returns (GCStagedResponse){}
+    rpc PinnedCids(Empty) returns (Empty){}
+}
+
+message Empty{}
+
+message Cid {
+    string str = 1;
+}
+message APIID {
+    string APIID = 1;
+}
+
+message StageCidRequest{
+    APIID ApiId= 1;
+    Cid Cid = 2;
+}
+
+message UnpinRequest{
+    APIID ApiId= 1;
+    Cid Cid = 2;
+}
+
+message PinRequest{
+    APIID ApiId= 1;
+    Cid Cid = 2;
+}
+message PinResponse{
+    int32 CumulativeSize= 1;
+}
+message ReplaceRequest {
+    APIID ApiId= 1;
+    Cid Source = 2;
+    Cid Dest = 3;
+}
+message ReplaceResponse {
+    int32 Res = 1;
+}
+
+message IsPinnedRequest{
+    APIID ApiId= 1;
+    Cid Cid = 2;
+}
+message IsPinnedResponse{
+    bool Pinned = 1;
+}
+
+message GCStagedRequest{
+    repeated Cid Cid = 1;
+    string time = 2;
+}
+
+message GCStagedResponse{
+    repeated Cid Cid = 1;
+}
